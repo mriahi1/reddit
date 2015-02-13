@@ -23,5 +23,5 @@ var app = angular
       .when('/', {
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
-      }),
+      });
   });
