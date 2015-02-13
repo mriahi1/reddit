@@ -1,6 +1,8 @@
 'use strict';
 /* global app:true */
 /* exported app */
+/* global firebase:true */
+/* exported firebase */
 /**
  * @ngdoc overview
  * @name redditApp
@@ -16,8 +18,10 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase',
   ])
+ 
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -25,3 +29,5 @@ var app = angular
         controller: 'PostsCtrl'
       });
   });
+
+  app.constant( 'FIREBASE_URL', 'https://boiling-fire-8005.firebaseio.com');
